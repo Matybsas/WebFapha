@@ -7,31 +7,27 @@
     <title>Fhapa Comercial</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/app.js"></script>
+    
 </head>
 <body>
-    <nav>
-        <div class="logo">
-            <a href="#"><img src="#" alt="Fhapa Comercial"></a>
-        </div>
-        <div class="btn-menu" >
-            <i class="fa-solid fa-bars"></i>
-        </div>
-        <div class="menu">
-            <ul>
-                <li><a href="#"><i class="fa-solid fa-house"></i>Inicio</a></li>
-                <li><a href="#"><i class="fa-solid fa-building"></i>Nosotros</a></li>
-                <li><a href="#"><i class="fa-solid fa-bag-shopping"></i>Productos</a>
-                     <ul class="sub-menu">
-                        <li><a href="#">Capillas</a></li>
-                        <li><a href="#">Carritos Plegables</a></li>
-                        <li><a href="#">Ceniceros Cremacion</a></li>
-                        <li><a href="#">Cruzes</a></li>
-                    </ul>
-                </li>
-                <li><a href="#"><i class="fa-solid fa-phone"></i>Contacto</a></li>
+    <span class="nav-bar" id="btnMenu"><i class="fa-solid fa-bars" style="color: #000000;"></i>Menú</span>
+    <nav class="man-nav">
+        <ul class="menu" id="menu">
+        <li class="menu__item"><a href="" class="menu__link">Inicio</a></li>
+        <li class="menu__item"><a href="" class="menu__link">Nosotros</a></li>
+        <li class="menu__item container-submenu">
+            <a href="#" class="menu__link submenu-btn">Productos<i class="fa-solid fa-caret-down"></i></a>
+            <ul class="submenu">
+                <li class="menu__item"><a href="" class="menu__link">Cruces</a></li>
+                <li class="menu__item"><a href="" class="menu__link">Carritos</a></li>
+                <li class="menu__item"><a href="" class="menu__link">Capillas</a></li>
+                <li class="menu__item"><a href="" class="menu__link">Ceniceros</a></li>
             </ul>
-        </div>
+        </li>
+        <li class="menu__item"><a href="" class="menu__link">Contacto</a></li>     
+
+        </ul>
     </nav>
+    <script src="js/app.js"></script>
 </body>
 </html>

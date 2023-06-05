@@ -1,46 +1,79 @@
 *{
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
+    box-sizing: border-box;
 }
-
-nav{
-    width: 100%;
-    height: 80px;
-    background-color: wheat;
+body{
+    margin: 0;
 }
-
-ul{
-    float: right;
-    margin-right: 40px;
-}
-ul li{  
-    display: inline-block;
-    margin: 0px 5px;
-    padding: 0px 5px;
-}
-
-nav li a {
-    background: red;
-    border-radius: 5px;
-    padding: 5px;    
-    font-size: 20px;
-    color: white;
-    text-decoration: none;
+/*menu*/
+.nav-bar{
+    background: #E38646;
+    padding: 20px;
     display: block;
-}
-
-a i{
     color: white;
-    padding-right: 10px;
+    cursor: pointer;
+    font-size: 1.5em;
+    width: 100%;
 }
-
-.btn-menu{
-float: right;
-margin-right: 40px;
-display: none;
+.menu, .submenu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
+.menu{
+    background: #555;
+    width: 100%;
+    margin-left: -100%;
+    transition: all 0.5s;
+}
+.menu__link{
+    display: block;
+    padding: 20px;
+    color: white;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+.menu__link:hover{
+    background: #444;
+}
+.submenu .menu__link:hover{
+    background: #222;
+}
+.submenu{
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+.submenu .menu__link{
+  background: #333;
+  padding-left: 50px;
+}
+.mostrar{
+    margin-left: 0;
+}
+/*finaliza el menu*/
 
-.sub-menu{
-    
+@media(min-width:1024px){
+    .nav-bar{
+        display: none;
+    }
+    .menu{
+        margin-left: 0;
+        display: flex;
+    }
+    .container-submenu{
+        position: relative;
+    }
+    .submenu{
+        position: absolute;
+        top: 60px;
+        width: 200px;
+        overflow: visible;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .container-submenu:hover .submenu{
+        opacity: 1;
+        visibility: visible;
+    }
 }
