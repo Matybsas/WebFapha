@@ -118,55 +118,65 @@ body{
     height: 300px;
     
 }
-
-.contenedor1{
+.contenedorbloque{
     width: 100%;
-	height: 100%;
-    display: flex;
-    flex-flow: row wrap;
-}
-.foto1{
-    width: 50%;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-	
-}
-.info1{
-    background: #222;
-    width: 50%;
-    height: 500px;
     display: flex;
     flex-flow: column wrap;
+    align-content: center;
     justify-content: center;
-    text-align: center;
-    color: aliceblue;
+}
+.bloque1, .bloque2{
+   width: 100%;
+}
+.foto1, .foto2{
+    width: 100%;
+    display: flex;
+   
 }
 
+.info1, .info2{
+    width: 100%;
+    background: #222;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    align-content: center;
+}
 .contenedor2{
     width: 100%;
 	height: 100%;
+    background: #222;
+    color: aliceblue;
+    border: 1px solid white;
+    border-radius: 15px;
     display: flex;
-    flex-flow: row wrap;
-    justify-content:space-between;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content:center;
+}
+
+.contactoFormu{
+    width: 90%;
+    display: flex;
 }
 .infoFormulario{
-    width: 50%;
-    padding: 15px;
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    text-align: center;
     display: flex;
-    padding: 15px;
     flex-flow: column wrap;
-    align-items: center;
-    justify-content: center;
 }
 .contenedorformulario{
-    width: 50%;
+    width: 70%;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
 }
 .contenedorformulario form{
-    background: red;
     width: 100%;   
     padding: 15px;
     display: flex;
@@ -175,16 +185,47 @@ body{
 }
 .contenedorformulario form input{
     width: 60%;
-    height: 35px;
+    height: 50px;
     margin: 10px;
+    text-align: center;
     border-radius: 50px;
-
 }
-
-
+.contenedorBtn{
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+.btn{
+    width: 70%;
+    margin: 15px;
+    background: grey;
+    font-size: 15px;
+    border: 1px solid white;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+.btn:hover{
+    background: #7a7852;
+    border: 1px solid white;
+    box-shadow: 2px 2px 5px 2px white;
+}
+legend{
+    text-align: center;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+::placeholder{
+    padding-left: 10px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    text-align: center;
+}
 @media(min-width:1024px){
-    
-    .nav-bar{
+   .nav-bar{
         display: none;
     }
     .menu{
@@ -229,4 +270,50 @@ body{
         margin-right: 15px;
         color: aliceblue;
     }
+    .contenedor1{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+    }
+
+   
+    .contenedor2{
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .contactoFormu{
+        width: 30%;
+        display: flex;
+           
+    }
+    .infoFormulario{
+    font-size: 23px;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    justify-content: end;
+    }
+    .bloque1, .bloque2{
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        
+    }
+    .foto1, .foto2 {
+        width: 50%;
+        height: 100%;
+        margin: 15px 0px;
+    }
+img{
+     object-fit: cover;
+    }    
+    .info1, .info2{
+        width: 50%;
+        margin: 15px 0px;
+        
+        
+    }
+   
+   
 }
